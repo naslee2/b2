@@ -1,0 +1,12 @@
+<button [routerLink]="['/home']">Home</button>
+
+<p>Write a Review</p>
+<div>
+  <form (submit)="restAdd()">
+    Restaurant Name: <input type="text" name="newRestaurant.name" [(ngModel)]="newRestaurant.name" /><br>
+    Cusine Type: <input type="text" name="newRestaurant.cusine" [(ngModel)]="newRestaurant.cusine" /><br>
+    <input type="submit" value="Submit"/>
+  </form>
+  <button [routerLink]="['/home']">Cancel</button>
+</div>
+<p>{{error}}</p>

@@ -1,0 +1,18 @@
+
+<button [routerLink]="['/home']">Home</button>
+<button [routerLink]="['/write/'+reviewId._id]" >New Review</button>
+<p>Reviews for {{reviewId.name}}</p>
+<div>
+  <table>
+      <tr>
+          <th>Customer</th>
+          <th>Stars</th>
+          <th>Description</th> 
+      </tr>
+      <tr *ngFor="let x of review">
+          <td>{{x['customer']}}</td>
+          <td>{{x['stars']}}</td>
+          <td>{{x['desc']}}</td>
+      </tr>
+  </table>
+</div>

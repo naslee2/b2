@@ -1,0 +1,18 @@
+<p>Register a restaurant:</p>
+<button [routerLink]="['/home']">Home</button>
+<div>
+  <form (submit)="reviewAdd()">
+    Your Name: <input type="text" name="newReview.customer" [(ngModel)]="newReview.customer" /><br>
+    Stars: <select name="newReview.star" [(ngModel)]="newReview.star">
+      <option value=1>1 star</option>
+      <option value=2>2 star</option>
+      <option value=3>3 star</option>
+      <option value=4>4 star</option>
+      <option value=5>5 star</option>
+    </select><br>
+    Your Review: <input type="text" name="newReview.review" [(ngModel)]="newReview.review" /><br>
+    <input type="submit" value="Submit"/>
+  </form>
+  <button [routerLink]="['/home']">Cancel</button>
+</div>
+<p>{{error}}</p>
